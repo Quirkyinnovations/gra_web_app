@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Events {% endblock %}
+
+{% block body %}
+    <div>
+        <h1>This is our Glory restoration Home page</h1>
+        <p>Welcome to our home page</p>
+        <p>Newses or events for Year {{year}}</p>
+        
+        {% for news in article_list %}
+            <h2>{{news.auth}}</h2>
+            <p>{{news.title}}</p>
+            <p>{{news.description}}</p>
+            <h4>{{news.pub_date}}</h4>
+        {% endfor %}
+    </div>
+{% endblock %}

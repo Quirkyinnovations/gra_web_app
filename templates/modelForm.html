@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Model Form {% endblock %}
+
+{% block body %}
+
+    <div>
+        <h1>Registration Model Form</h1>
+        <form action="{% url 'addModelForm' %}" method="POST">
+            {% csrf_token %}
+            {{modelForm.username}}
+            {{modelForm.email}}
+            {{modelForm.phone}}
+            {{modelForm.password}}
+            {{modelForm.location}}
+            <div class="form-group">
+                <input type="submit" value="Sign Up">
+            </div>
+        </form>
+        
+    </div>
+
+{% endblock %}

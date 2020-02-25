@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.R.A - {% block title %}{% endblock %}</title>
+    
+    <!-- link css styles -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+    
+    <!-- Include navigation in django -->
+    {% include  'inc/navbar.html' %}
+    
+</head>
+<body>
+   {% block body %} {% endblock %}
+</body>
+</html>
